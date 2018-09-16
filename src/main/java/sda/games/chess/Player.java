@@ -15,40 +15,40 @@ public class Player {
         System.out.print("Ruch: " + inputMove);
         inputMove = scanner.nextLine();
         int fromX = Integer.parseInt(charToInt(inputMove.toUpperCase().charAt(0)));
-        int fromY = Integer.parseInt(inputMove.substring(1, 2));
+        int fromY = Integer.parseInt(inputMove.substring(1, 2)) - 1;
         int toX  = Integer.parseInt(charToInt(inputMove.toUpperCase().charAt(4)));
-        int toY = Integer.parseInt(inputMove.substring(5));
+        int toY = Integer.parseInt(inputMove.substring(5)) - 1;
         
         Move move = new Move(fromX, fromY, toX, toY);
 
     }
 
     public String charToInt(char c) {
-        String number = "0";
+        String number = "-1";
         switch (c) {
             case 'A':
-                number = "1";
+                number = "0";
                 break;
             case 'B':
-                number = "2";
+                number = "1";
                 break;
             case 'C':
-                number = "3";
+                number = "2";
                 break;
             case 'D':
-                number = "4";
+                number = "3";
                 break;
             case 'E':
-                number = "5";
+                number = "4";
                 break;
             case 'F':
-                number = "6";
+                number = "5";
                 break;
             case 'G':
-                number = "7";
+                number = "6";
                 break;
             case 'H':
-                number = "8";
+                number = "7";
                 break;
             default:
                 break;
