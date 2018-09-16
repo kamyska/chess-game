@@ -21,7 +21,7 @@ public class Player {
         
        return new Move(fromX, fromY, toX, toY);
 
-        return move;
+
     }
 
     public String charToInt(char c) {
