@@ -1,8 +1,9 @@
 package sda.games.chess;
 
-public class Queen {
+public class Queen extends Figure{
 
-    public boolean isMoveValid(){
+    @Override
+     public boolean isMoveValid(){
         return true;
 
     }
