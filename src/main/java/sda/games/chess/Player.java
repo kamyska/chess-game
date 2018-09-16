@@ -6,48 +6,49 @@ public class Player {
 
     public void getMove() {
 
-        String move:
+        String inputMove = "";
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wprowadz ruch wpisujac pole z ktorego chcesz przeunac pionek na pole na ktore chcesz "
                             + "na pole na ktorre chcesz przesunac wstawiajac pomiedzy swoj wybor znak \">\", np:\n"
                             + "A1>H8");
-        System.out.print("Ruch: " + move);
-        int fromX = Integer.parseInt(charToInt(move.substring(0, 1)))
-        int fromY;
-        int toX;
-        int toY;
-
-        Move move = new Move();
+        System.out.print("Ruch: " + inputMove);
+        inputMove = scanner.nextLine();
+        int fromX = Integer.parseInt(charToInt(inputMove.toUpperCase().charAt(0)));
+        int fromY = Integer.parseInt(inputMove.substring(1, 2));
+        int toX  = Integer.parseInt(charToInt(inputMove.toUpperCase().charAt(4)));
+        int toY = Integer.parseInt(inputMove.substring(5));
+        
+        Move move = new Move(fromX, fromY, toX, toY);
 
     }
 
-    public int charToInt(char c) {
-        int number = 0;
+    public String charToInt(char c) {
+        String number = "0";
         switch (c) {
             case 'A':
-                number = 1;
+                number = "1";
                 break;
             case 'B':
-                number = 2;
+                number = "2";
                 break;
             case 'C':
-                number = 3;
+                number = "3";
                 break;
             case 'D':
-                number = 4;
+                number = "4";
                 break;
             case 'E':
-                number = 5;
+                number = "5";
                 break;
             case 'F':
-                number = 6;
+                number = "6";
                 break;
             case 'G':
-                number = 7;
+                number = "7";
                 break;
             case 'H':
-                number = 8;
+                number = "8";
                 break;
             default:
                 break;
